@@ -75,21 +75,5 @@ public class Application implements CommandLineRunner{
         //load the data in to the db
         String sql_write_str="INSERT INTO grocery(" + sql_coll + ") VALUES (" + sql_perams + ")";
         jdbcTemplate.batchUpdate(sql_write_str, batchlist);
-        //callends here but i will need the below call later for api shit
-        
-        log.info("Querying for grocery data");
-         jdbcTemplate.query(
-                 "SELECT * FROM grocery",
-                 (rs, rowNum) -> new Grocery_item(
-                   rs.getString("id"),
-                   rs.getString("description"),
-                   rs.getString("lastSold"),
-                   rs.getString("shelfLife"),
-                   rs.getString("department"),
-                   rs.getString("price"),
-                   rs.getString("id"),
-                   rs.getString("xFor"),
-                   rs.getString("cost"))
-         ).forEach(grocery_item -> log.info(grocery_item.toString()));
     }
 }
