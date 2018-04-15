@@ -1,0 +1,20 @@
+to build and run on arch linux
+gradle build
+gradle run
+gradle bootRun
+
+to build the cross platform version
+gradle wrapper --gradle-version 2.13
+
+option two
+./gradlew build
+./gradlew run
+./gradlew bootRun
+
+
+use bootRun to start the spring app insted of run
+
+to build and run a jar:
+gradle clean build && java -jar build/libs/gs-actuator-service-0.1.0.jar
+
+for DB will be using h2 as it is built in to Spring Boot supports H2, an in-memory relational database engine
