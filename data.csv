@@ -1,4 +1,4 @@
-ID,Description,lastSold,ShelfLife,Department, Price ,Unit,xFor, Cost
+id, description, lastSold, shelfLife, department, price, unit, xFor, cost
 753542,banana,9/5/2017,4d,Produce, $2.99 ,lb,1, $0.44
 321654,apples,9/6/2017,7d,Produce, $1.49 ,lb,1, $0.20
 95175,Strawberry,9/7/2017,3d,Produce, $2.49 ,lb,1, $0.10

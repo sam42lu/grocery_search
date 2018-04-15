@@ -29,6 +29,11 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-devtools")
     testCompile("junit:junit")
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework:spring-jdbc")
+    compile("com.h2database:h2")
+
+    compile("com.opencsv:opencsv:4.1")
 }
 
 jar {
