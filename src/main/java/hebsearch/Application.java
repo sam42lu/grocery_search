@@ -36,7 +36,7 @@ public class Application implements CommandLineRunner{
     @Override
     public void run(String... strings) throws Exception {
 
-        log.info("starting the runnn script ***********************************************************************************");
+        log.info("starting to load data");
         //start reading in the CSV file
         Reader reader = Files.newBufferedReader(Paths.get(groecry_csv_path));
         CSVReader csvReader = new CSVReader(reader);
