@@ -25,16 +25,17 @@ public class Grocery_search_controller {
     @ResponseBody //basicaly tesl spring not to use a view
     public ArrayList<String> search(@RequestParam(name="serch_term", required=false, defaultValue="foo") String serch_term) {
       ArrayList<String> g_list = new ArrayList<String>();
-      System.out.println("serch tem is"+ serch_term);
-      //list of colems to iterate over
-      String[] sql_col_array = ["id", "description", "lastSold", "shelfLife", "department", "price", "unit", "xFor", "cost"];
-      //iterate to build a sql partal
+
+      String[] sql_col_array = {"id", "description", "lastSold", "shelfLife", "department", "price", "unit", "xFor", "cost"};
+      String sql_partial="";
+
       for(String coll : sql_col_array){
-        System.out.println(coll);
+        sql_partial = sql_partial + coll + " like '%"+ serch_term +"%' OR ";
       }
-      //build sql
-      sql_query = "SELECT * FROM grocery";
-      //run
+
+      sql_partial = sql_partial.substring(0, sql_partial.length() - 4);
+      String sql_query = "SELECT * FROM grocery WHERE "+sql_partial;
+      System.out.println(sql_partial);
 
        jdbcTemplate.query(
                sql_query,
