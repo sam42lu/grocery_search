@@ -4,21 +4,38 @@
     <title>grocery search</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="style.css" rel="stylesheet"/>
+    <script src="helpers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="item">
-      serch for an item in this SBF site
+  <div class="container_head">
+
+    <div class="item_head">
+      Search for an item in this online grocery store.
     </div>
-    <div class="item">
-      serch box coming soon
-    </div>
-    <div class="item">
-      serch buttin coming soon
-    </div>
-    <div class="item">
-      result set comming soonn
-    </div>
+
   </div>
+
+  <div class="container_input">
+
+    <div class="item_input">
+       <button type="button" class="button_s" onclick="search()">
+         search the store for one or a list of items
+       </button>
+    </div>
+
+    <div class="item_input">
+      <input type="text" name="search_box" size="80" class="search_box">
+    </div>
+
+  </div>
+
+  <!-- <div class="container_grocery_list">
+
+  </div> -->
+  <div class="out_contaner">
+
+  </div>
+
 </body>
 </html>
