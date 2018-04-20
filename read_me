@@ -28,3 +28,11 @@ add a real javascript framwork like ember
 write backend test 
 write front end test 
 deploy to cloud infrastructur like AWS or google app engen 
+
+bugs:
+ui
+fix CSS the responcive Flex is not corect 
+
+backend:
+add suport for CORS(cros origen resource sharing) so that the the API and site can be served from seporat urls
+
